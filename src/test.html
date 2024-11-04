@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Hover Transition Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <!-- Navigation Menu -->
+<ul class="hidden lg:flex justify-between space-x-12" id="nav_buttons">
+  <li>
+      <button onClick="view('home')" class="nav-button" id="home_button">Home</button>
+  </li>
+  <li>
+      <button onClick="view('about')" class="nav-button" id="about_button">About</button>
+  </li>
+  <li>
+      <button onClick="view('upcoming')" class="nav-button" id="upcoming_button">Upcoming Events</button>
+  </li>
+  <li>
+      <button onClick="view('team')" class="nav-button" id="team_button">Our Team</button>
+  </li>
+  <li>
+      <button onClick="view('contact')" class="nav-button" id="contact_button">Contact</button>
+  </li>
+</ul>
+
+<!-- Corresponding Sections -->
+<section id="home"> <div class="flex justify-center items-center" style="height: 100vh;">
+  Home Section
+</div></section>
+<section id="about"> <div class="flex justify-center items-center" style="height: 100vh;">
+  About Section
+</div></section>
+<section id="upcoming"> <div class="flex justify-center items-center" style="height: 100vh;">
+  Upcoming Section
+</div></section>
+<section id="team"> <div class="flex justify-center items-center" style="height: 100vh;">
+  Team Section
+</div></section>
+<section id="contact"> <div class="flex justify-center items-center" style="height: 100vh;">
+  Contact Section
+</div></section>
+
+<script>
+  // Select all sections and buttons
+const sections = document.querySelectorAll('section[id]');
+const buttons = document.querySelectorAll('#nav_buttons .nav-button');
+
+// Function to highlight the active section button
+function scrollActive() {
+    const scrollY = window.scrollY;
+
+    sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
+
+        const button = document.getElementById(`${sectionId}_button`);
+        const isActive = scrollY > sectionTop && scrollY <= sectionTop + sectionHeight;
+
+        // Toggle active styles
+        button?.classList.toggle('text-red-500', isActive);
+        button?.classList.toggle('bg-transparent', !isActive);
+    });
+}
+
+// Add scroll listener to window
+window.addEventListener('scroll', scrollActive);
+
+</script>
+  
+
+</body>
+</html>

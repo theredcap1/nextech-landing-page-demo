@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        :root {
+            font-family: "Poppins", sans-serif;
+        }
+        li {
+            margin-left: 0 !important;
+        }
+    </style>
+    <link rel="icon" href="../assets/img/Asset 3@4x.png">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+<body class="min-h-screen bg-neutral-950 scroll-smooth">
+    <nav class="sticky top-0 py-6 z-50 backdrop-blur-lg font-semibold" id="header">
+        <div class="container px-0 mx-auto lg:px-20 relative text-sm w-full">
+            <div class="flex justify-between items-center">
+                <div class="flex w-full items-center flex-shrink-0 justify-evenly gap-24 lg:w-fit">
+                    <a href="/" class="flex items-center z-50">
+                        <img src="../assets/img/Asset 3@4x.png" alt="logo" class="mr-2 w-12"/>
+                    </a>
+                    <button class="sticky text-white lg:hidden text-3xl z-50 cursor-pointer" id="nav-toggle"><ion-icon onclick="onToggleMenu(this)" name="menu"></ion-icon></button>
+                </div>
+                <div class="lg:static lg:min-h-fit lg:w-auto absolute bg-neutral-800 min-h-[60vh] justify-center w-full left-0 top-[-100vh] lg:bg-transparent flex items-center text-center pt-24 pb-16 lg:pt-0 lg:pb-0 transition-all duration-400" id="nav_buttons">
+                    <ul class="flex lg:flex-row flex-col justify-between items-center space-x-12 md:gap-[4vw] gap-12">
+                        <li>
+                            <button onClick=view('home') class="text-center text-xl text-transparent bg-gradient-to-b from-neutral-500 to-transparent bg-clip-text transition-all duration-500 hover:text-red-600" id="home_button" class="nav_button">Home</button>
+                        </li>
+                        <li>
+                            <button onClick=view("about") class="text-center text-xl text-transparent bg-gradient-to-b from-neutral-500 to-transparent bg-clip-text transition-all duration-500 hover:text-red-600" id="about_button" class="nav_button">About</button>
+                        </li>
+                        <li>
+                            <button onClick=view("upcoming") class="text-center text-xl text-transparent bg-gradient-to-b from-neutral-500 to-transparent bg-clip-text transition-all duration-500 hover:text-red-600" id="upcoming_button" class="nav_button">Upcoming events</button>
+                        </li>
+                        <li>
+                            <button onClick=view("team") class="text-center text-xl text-transparent bg-gradient-to-b from-neutral-500 to-transparent bg-clip-text transition-all duration-500 hover:text-red-600" id="team_button" class="nav_button">Our Team</button>
+                        </li>
+                        <li>
+                            <button onClick=view("contact") class="text-center text-xl text-transparent bg-gradient-to-b from-neutral-500 to-transparent bg-clip-text transition-all duration-500 hover:text-red-600" id="contact_button" class="nav_button">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="gap-24 mx-12 flex flex-col w-auto pt-20 justify-evenly items-center max-w-fit md:flex-row">
+            <img src="../assets/img/Asset%203@4x.png" alt="" class="w-96 h-auto">
+            <div class="flex flex-col items-center">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl text-center tracking-w text-white">
+                    Welcome to <span
+                        class='bg-gradient-to-b from-red-600 to-transparent bg-clip-text text-transparent'>NexTech Squad!</span>
+                </h1>
+                <p class="text-center mt-10 text-base text-neutral-500 max-w-4xl sm:text-lg">
+                    Join us in exploring an exciting world of technological possibilities with us at Nextech! For more information, feel free to contact us.
+                </p>
+                <div class="flex flex-col justify-center items-center my-10 sm:flex-row">
+                    <a href="#"
+                       class="text-base bg-gradient-to-b from-red-600 to-transparent border-red-600 border-2 py-3 px-4 mx-3 rounded-md md:text2xl text-white transition-all duration-300 hover:bg-red-600">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pt-12 md:pt-36" id="about">
+        <div class="flex flex-col items-center min-h-screen">
+            <h2 class="text-5xl font-semibold  text-neutral-500 mb-12 text-center md:text-7xl sm:mb-0">
+                About Us
+            </h2>
+            
+            <div class="flex items-center p-6 md:py-16 md:px-24">
+                <div class="flex flex-col">
+                    <h1 class="font-medium text-white text-3xl mb-6 hidden lg:block">Nextech Squad</h1>
+                    <p class="text-xl text-neutral-600">Nextech Squad is a vibrant community of tech enthusiasts and innovators . We are passionate about exploring the latest trends in technology, fostering creativity, and sharing knowledge among our members. Our mission is to create an inclusive environment where students can collaborate, learn, and grow together in the ever-evolving world of technology. Join us as we embark on exciting projects, workshops, and events that push the boundaries of innovation.</p>
+                    <div class="flex mt-6">
+                        <a href="" class="bg-red-600 text-white py-4 px-6 w-fit rounded-lg mr-3">Join Now</a>
+                        <a href="" class=" text-white px-4 py-4 w-fit rounded-lg border-white border transition-all duration-500 hover:bg-red-600">Learn More</a>
+                    </div>
+                </div>
+                <img src="../assets/img/hero-bg.png" alt="" class="hidden lg:inline">
+            </div>
+        </div>
+    </section>
+    <section class="pt-12 md:pt-24" id="upcoming">
+        <div class="flex flex-col items-center">
+            <h2 class="text-5xl font-semibold text-neutral-500 mb-16 text-center md:text-7xl sm:mb-32">
+                Upcoming Events
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 px-3">
+                <div class="w-72 bg-neutral-800 rounded-3xl">
+                    <img src="../assets/img/0-event-announcement-newsletter-thumb.jpg" class="rounded-t-3xl" alt="">
+                    <div class="flex flex-col justify-center p-6 text-white flex-wrap-reverse">
+                        <h1 class="text-bold text-3xl mb-2 md:mb-4">Clubs Fair</h1>
+                        <h4 class="text-base mb-2 md:mb-4">28/10/2024</h4>
+                        <p class="text-sm text-neutral-500">A collaboration with Mozilla Campus Club that aims to showcase both of the clubs and organising a couple of conferences and workshops as a part of the clubs' Open Day.</p>
+                    </div>
+                </div>
+                <div class="w-72 bg-neutral-800 rounded-3xl">
+                    <img src="../assets/img/0-event-announcement-newsletter-thumb.jpg" class="rounded-t-3xl" alt="">
+                    <div class="flex flex-col justify-center p-6 text-white flex-wrap-reverse">
+                        <h1 class="text-bold text-3xl mb-2 md:mb-4">International Migrants Day</h1>
+                        <h4 class="text-base mb-2 md:mb-4">17/12/2024</h4>
+                        <p class="text-sm text-neutral-500">The goal is to present the different steps of the immigration process to those who want to live abroad.</p>
+                    </div>
+                </div>
+                <div class="w-72 bg-neutral-800 rounded-3xl">
+                    <img src="../assets/img/0-event-announcement-newsletter-thumb.jpg" class="rounded-t-3xl" alt="">
+                    <div class="flex flex-col justify-center p-6 text-white flex-wrap-reverse">
+                        <h1 class="text-bold text-3xl mb-2 md:mb-4">Artificial Intelligence Day</h1>
+                        <h4 class="text-base mb-2 md:mb-4">??/??/202?</h4>
+                        <p class="text-sm text-neutral-500">With the fast-rising popularity of ML-based tools such as ChatGPT, Midjourney and Claude.ai, the event emerges to give in-depth details about the reality of Artificial Intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-12 md:pt-24 w-full" id="team">
+        <div>
+            <div class="flex flex-col flex-wrap justify-center w-full">
+                <h2 class="text-5xl font-semibold text-neutral-500 mb-12 text-center md:text-7xl sm:mb-12">
+                    Our Team
+                </h2>
+                <div class="flex flex-col p-8 items-center lg:p-6 gap-5 lg:flex-row">
+                    <div class="bg-neutral rounded-md p-6 text-md border border-neutral-800 lg:flex-col-reverse lg:flex" >
+                        <div class="flex flex-col items-center flex-wrap overflow-hidden h-fit lg:flex-row lg:items-start lg:mt-8 mb-8 lg:mb-0">
+                            <img src="../assets/img/john-doe-image.png" alt="" class="rounded-full h-48 lg:h-12 lg:mr-6 mb-8 lg:mb-0 border border-neutral-300"/>
+                            <div class="text-center lg:text-left">
+                                <h6 class="text-neutral-300">
+                                    John Doe
+                                </h6>
+                                <span class=" text-neutral-600">
+                                    Designer
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-500 text-center lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime quos accusantium.</p>
+                    </div>
+                    <div class="bg-neutral rounded-md p-6 text-md border border-neutral-800 lg:flex-col-reverse lg:flex" >
+                        <div class="flex flex-col items-center flex-wrap overflow-hidden h-fit lg:flex-row lg:items-start lg:mt-8 mb-8 lg:mb-0">
+                            <img src="../assets/img/john-doe-image.png" alt="" class="rounded-full h-48 lg:h-12 lg:mr-6 mb-8 lg:mb-0 border border-neutral-300"/>
+                            <div class="text-center lg:text-left">
+                                <h6 class="text-neutral-300">
+                                    John Doe
+                                </h6>
+                                <span class=" text-neutral-600">
+                                    Designer
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-500 text-center lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime quos accusantium.</p>
+                    </div>
+                    <div class="bg-neutral rounded-md p-6 text-md border border-neutral-800 lg:flex-col-reverse lg:flex" >
+                        <div class="flex flex-col items-center flex-wrap overflow-hidden h-fit lg:flex-row lg:items-start lg:mt-8 mb-8 lg:mb-0">
+                            <img src="../assets/img/john-doe-image.png" alt="" class="rounded-full h-48 lg:h-12 lg:mr-6 mb-8 lg:mb-0 border border-neutral-300"/>
+                            <div class="text-center lg:text-left">
+                                <h6 class="text-neutral-300">
+                                    John Doe
+                                </h6>
+                                <span class=" text-neutral-600">
+                                    Designer
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-neutral-500 text-center lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime quos accusantium.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-12 md:pt-16">
+        <div class="flex flex-col items-center">
+            <h2 class="text-5xl font-semibold  text-neutral-500 mb-12 text-center md:text-7xl sm:mb-0" id="Hero">
+                Partners
+            </h2>
+            <div class="flex flex-col justify-evenly h-48 content-center items-center w-full mt-4 md:flex-row md:justify-evenly md:items-center md:mt-12">
+                <img src="../assets/img/sponsor2.png" class="w-24" alt="">
+                <img src="../assets/img/sponsor3.png" class="w-24" alt="">
+                <img src="../assets/img/sponsor4.png" class="w-24" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <footer class="mt-20 border-t py-10 border-neutral-700 text-white" id="Footer">
+            <div class="flex flex-col items-center lg:items-start lg:flex-row justify-evenly gap-4 lg:grid-cols-4 px-6 lg:px-24 w-full lg:gap-0">
+                <img src="../assets/img/Asset%203@4x.png" alt="" class="h-6">
+                <div>
+                    <h3 class="text-md font-semibold mb-4">
+                        Discover Our Club
+                    </h3>
+                    <ul class="space-y-2 flex flex-col items-center lg:relative lg:items-start">
+                        <li>
+                            <button onclick=view("about") class="text-neutral-300 hover:text-white transition-all duration-500">About Us</button>
+                        </li>
+                        <li>
+                            <button onclick=view("upcoming") class="text-neutral-300 hover:text-white transition-all duration-500">Events</button>
+                        </li>
+                        <li>
+                            <button onclick=view("team") class="text-neutral-300 hover:text-white transition-all duration-500">Membership</button>
+                        </li>
+                        <li>
+                            <button onclick=view("contact") class="text-neutral-300 hover:text-white transition-all duration-500">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-md font-semibold mb-4">
+                        Support
+                    </h3>
+                    <ul class="space-y-2 flex flex-col items-center lg:relative lg:items-start">
+                        <li><a href="/help" class="text-neutral-300 hover:text-white transition-all duration-500">Help</a></li>
+                        <li><a href="/register" class="text-neutral-300 hover:text-white transition-all duration-500">Register</a></li>
+                    </ul>
+                </div>
+                <form action="" class="flex h-16 rounded-lg py-2 pr-2 bg-neutral-800 lg:">
+                    <input type="email" name="email" id="" placeholder="E-mail" class="bg-neutral-800 py-3 px-6 rounded-lg w-48 lg:w-64">
+                    <button type="submit" class="bg-neutral-950 rounded-lg p-3">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+    </section>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
